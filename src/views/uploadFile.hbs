@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload file</title>
+    <link rel="stylesheet" type="text/css" href="/css/popup_style.css">
+    <style>
+        body
+        {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wwdemo,
+        .wwdemo a
+        {
+            font-family: Arial;
+            color: #585858;
+        }
+
+        .wwdemo .demo-container
+        {
+            background-color: #FFFFFF;
+            width: 88%;
+            margin: 2% auto;
+            max-width: 40em;
+            padding: 1.5% 3% 3%;
+        }
+
+        .wwdemo h1
+        {
+            text-align: center;
+            word-spacing: -0.1em;
+            letter-spacing: -0.02em;
+        }
+
+        .wwdemo a.button
+        {
+            -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+            box-shadow:inset 0px 1px 0px 0px #ffffff;
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+            background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+            background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+            background-color:#ffffff;
+            -moz-border-radius:6px;
+            -webkit-border-radius:6px;
+            border-radius:0.22em;
+            border:1px solid #dcdcdc;
+            display:inline-block;
+            cursor:pointer;
+            color:#666666;
+            font-family:Arial;
+            font-size:15px;
+            font-weight:bold;
+            padding:19px 46px;
+            text-decoration:none;
+            text-shadow:0px 1px 0px #ffffff;
+            margin: 2em auto;
+            display: block;
+            max-width: 12em;
+            text-align: center;
+        }
+
+        .wwdemo a.button:hover
+        {
+            background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+            background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+            background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+            background-color:#f6f6f6;
+        }
+
+        .wwdemo a.button:active
+        {
+            position:relative;
+            top:1px;
+        }
+
+        .demo-description
+        {
+            font-size: 1.1em;
+            line-height: 1.4em;
+            margin: 2em 0;
+        }
+    </style>
+    
+</head>
+<body>
+<br><br>
+
+<div class="conseils">
+    <button id="show_tips" onclick="tips()">Conseils d'utilisation:</button>
+</div>
+<br>
+
+<h1>Configuration</h1>
+<form class="popup" method="post" action="/" enctype="multipart/form-data">
+
+    <table>
+        <tr>
+            <td>
+                Extract imputations:
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <input type = "file" name = "file" value = "Browse File"/>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <input type="submit" id="upload" value="Télécharger"/>
+</form>
+<br>
+<form method="post" action="/skip">
+    <input type="submit" id="skip" value="Continuer sans télécharger">
+</form>
+<div class="error_box">
+    <p hidden id="error" >{{error_message}}</p>
+    <p id="error_message" ></p>
+</div>
+<br>
+<a href="/files/Guide.pdf" download rel="noopener noreferrer" target="_blank">
+    <p style="font-size: 15px">Télécharger le guide d'utilisateur</p>
+</a>
+<br>
+
+<script type="text/javascript"  src="/js/scripts.js"></script>
+
+</body>
+</html>

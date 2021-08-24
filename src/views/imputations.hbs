@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload file</title>
+    <link rel="stylesheet" type="text/css" href="/css/popup_style.css">
+    
+</head>
+<body>
+<br>
+<br><br>
+<br>
+
+<h1>Config Imputations</h1>
+<form class="popup" method="post" action="newfileupload" enctype="multipart/form-data">
+
+    <table>
+        <tr>
+            <td>
+                Extract imputations:
+            </td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td>
+                <input type = "file" name = "file" value = "Browse File"/>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table style="width: 100%;">
+        <tr>
+            <td></td>
+            <td>
+                <a href="/ServiceParMois">
+                    <input type="button" id="annuler" value="Annuler" />
+                </a>
+            </td>
+
+            <td>
+                <input type="submit" id="upload" value="Télécharger" />
+            </td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+<br>
+<div class="error_box">
+    <p hidden id="error" >{{error_message}}</p>
+    <p id="error_message" ></p>
+</div>
+
+<script>
+    let error = document.getElementById("error").innerText;
+    let error_message =document.getElementById("error_message");
+    error_message.innerHTML = '';
+    var i=0;
+    for(var k=0; k<3; k++){
+        let txt = error.substr(i, error.length);
+        var saut = txt.indexOf('.');
+        let text = txt.substr(0,saut+1);
+        i= i+saut+1;
+
+        error_message.innerHTML += text + "<br>";
+    }
+
+
+</script>
+</body>
+</html>

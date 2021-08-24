@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--suppress JSDuplicatedDeclaration -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Service par mois</title>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <link rel="stylesheet" href="/css/tables_style.css">
+    <style>
+        button[id='s_m']{
+            background: #ffe7e7;
+            color: black;
+            font-weight: bold;
+        }
+        td{
+            vertical-align: top;
+        }
+    </style>
+
+</head>
+
+<body>
+<div id="head_box">
+    <table id="menu">
+        <tr>
+            <td>
+                <a href="/ServiceParMois" >
+                    <button id="s_m">P&C<br>Service/Mois</button>
+                </a>
+            </td>
+            <td>
+                <a href="/ServiceParApk" >
+                    <button id="s_a">P&C<br>Application/Service</button>
+                </a>
+            </td>
+            <td>
+                <a href="/PersonneParApk" >
+                    <button id="p_a">P&C<br>Personne/Application</button>
+                </a>
+            </td>
+            <td>
+                <a href="/PersonneParMois" >
+                    <button id="p_m">P&C<br>Personne/Mois</button>
+                </a>
+            </td>
+            <td>
+                <a href="/TMA" >
+                    <button id="tma">TMA Personnes/Services</button>
+                </a>
+            </td>
+            <td>
+                <a href="/TMA2" >
+                    <button id="tma2">TMA Applications/Services</button>
+                </a>
+            </td>
+            <td>
+                <a href="/global" >
+                    <button id="global">Effort Distribution</button>
+                </a>
+            </td>
+
+
+            <!--espace-->
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+            </td>
+
+            <td>
+                <a href="/imputations" >
+                    <button id="new_extract">Config Imputations</button>
+                </a>
+            </td>
+            <td>
+                <a href="/config" >
+                    <button id="config">Config Commande</button>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p id="listServiceParApkMois" hidden >{{listServiceParApkMois}}</p>
+<p id="ListApplication" hidden >{{ListApplication}}</p>
+<p id="commande_vendu_m1" hidden >{{commande_vendu_m1}}</p>
+<p id="commande_vendu_m2" hidden >{{commande_vendu_m2}}</p>
+<p id="commande_vendu_m9" hidden >{{commande_vendu_m9}}</p>
+<p id="listAvenant" hidden >{{listAvenant}}</p>
+
+<p id="error"></p>
+
+<table style="width: 100%">
+    <tr>
+        <td><a href="/ServiceParMois">
+            <button class="mode" > Mode "par mois"</button>
+        </a></td>
+        <td><a href="/ServiceParMoisWeek">
+            <button class="mode" style="background: rgba(172, 160, 255, 0.65);
+            border-color: black; color: black"> Mode "par semaine"</button>
+        </a></td>   </tr>
+</table>
+
+<div id="filters">
+    <form class="_filter"  id="apk_filter" >
+        <div class="div_checklist" >
+            <table id="filter_table" ></table>
+        </div>
+    </form>
+</div>
+
+<table style="width: 100%; margin: 5px auto">
+    <tr>
+        <td>
+            <table class="data_table" id="data_table" style="width: 100%; margin: 5px auto">
+                <thead id="thead">
+                </thead>
+
+                <tbody id="table_service_par_mois">
+                </tbody>
+            </table>
+
+            <div id="canves">
+                <canvas id="myChart" style="width:100%;max-width:650px;
+margin: 10px 10px 10px 300px"></canvas>
+            </div>
+
+        </td>
+        <td>
+            <br> <br>
+            <button onclick="confirmWeeks()" id="confirmer">Confirmer les semaines</button>
+        </td>
+    </tr>               
+</table>
+
+<script type="text/javascript"  src="/js/script_o11_Week.js"></script>
+
+
+</body>
+</html>
