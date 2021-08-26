@@ -235,9 +235,9 @@ calc_tableValues();
                 filter_service_on += filterList_service[k];
             }
             let text = '';
-            text = p_total_filter_imp[i][j].toFixed(2);
+            text = p_total_filter_imp[i][j];
 
-            if (text !== 0) apk.innerText = text;
+            if (text !== 0) apk.innerText = text.toFixed(2);
             else apk.innerText = '';
         }
     }
@@ -514,8 +514,8 @@ function update_table() {
                 filter_service_on += filterList_service[k];
             }
             let text = '';
-            text = p_total_filter_imp[i][j].toFixed(2);
-            if (text !== 0) apk.innerText = text;
+            text = p_total_filter_imp[i][j];
+            if (text !== 0) apk.innerText = text.toFixed(2);
             else apk.innerText = '';
         }
     }
