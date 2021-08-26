@@ -1,0 +1,51 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "",
+  "main": "src/bin/www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/bin/www",
+    "build": "nexe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "ejs-html": "^5.1.5",
+    "excel-data": "^2.0.4",
+    "exceljs": "^4.2.1",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.2",
+    "file-save": "^0.2.0",
+    "hbs": "^4.1.2",
+    "html": "^1.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nexe": "^3.3.3",
+    "oracledb": "^5.2.0",
+    "path": "^0.12.7",
+    "pkg": "^5.3.1",
+    "pkg-bin": "^1.0.2",
+    "require": "^2.4.20",
+    "require-async": "0.0.4",
+    "require-install": "^0.3.3",
+    "requirejs": "^2.3.6",
+    "requirejs-browser": "^2.1.9",
+    "sequelize": "^6.6.5",
+    "serve-favicon": "^2.5.0",
+    "typescript": "^4.4.0-dev.20210714",
+    "typescript-async": "^1.0.7",
+    "typescript-require": "^0.3.0",
+    "xlsx": "^0.17.0",
+    "xlsx-node": "^0.1.1",
+    "xlsx-rows": "^1.0.0"
+  },
+  "devDependencies": {
+    "cookie-parser": "^1.4.5",
+    "formidable": "^1.2.2"
+  }
+}
