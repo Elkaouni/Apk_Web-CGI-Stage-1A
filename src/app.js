@@ -73,5 +73,5 @@ function getDir() {
     }
 }
 
-app.listen(8000, () => console.log("Server at 8000"))
-//module.exports = app;
+//app.listen(8000, () => console.log("Server at 8000"))
+module.exports = app;
