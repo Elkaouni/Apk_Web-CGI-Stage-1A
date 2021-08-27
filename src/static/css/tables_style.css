@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    font-size: 10px;
+    background: #fdfdff;
+}
+
+button, a:link, a:visited{
+    text-align: center;
+    padding: 3px 5px;
+    outline: none;
+    border-radius: 7px;
+    border-color: rgba(198, 0, 0, 0);
+    transition: 0.25s;
+    font-size: 16px;
+    background: none;
+    color: white;
+}
+button:hover{
+    background: rgba(255, 250, 250, 0.84);
+    color: black;
+}
+
+div[id="head_box"]{
+    background: rgba(198, 0, 0, 0.85);
+    padding: 5px;
+    height: 50px;
+    width: fit-content;
+}
+table[id="head_box"],.table[id="head_box"] td{
+    border: 1px solid;
+    padding: 4px;
+    margin: 2px auto;
+}
+
+table[id="menu"]{
+    background: none;
+}
+
+.filter{
+    padding: 6px;
+    width: fit-content;
+    position: page;
+    border: 2px solid rgba(198, 0, 0, 0.85);
+    border-radius: 7px;
+    background: #ffeaea;
+    text-align: left;
+    font-size: 12px;
+}
+._filter{
+    padding: 4px;
+    margin: 3px;
+    width: fit-content;
+    border: 2px solid rgba(198, 0, 0, 0.85);
+    border-radius: 7px;
+    background: #ffeaea;
+    text-align: left;
+    font-size: 13px;
+}
+
+
+.filter input[type="button"], ._filter input[type="button"]{
+    border: 2px solid rgba(198, 0, 0, 0.85);
+    margin: 10px auto;
+    text-align: center;
+    outline: none;
+    border-radius: 7px;
+    transition: 0.25s;
+    font-size: 10px;
+    font-weight: bold;
+    background: rgba(255, 0, 0, 0.14);
+}
+.filter input[type="button"]:hover, ._filter input[type="button"]:hover{
+    background: rgba(255, 101, 101, 0.81);
+}
+
+.data_table table,.data_table th, .data_table td{
+    border: 1px solid;
+    padding: 4px;
+}
+
+table[id='data_table']{
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 120%;
+    font-size: 12px;
+}
+.data_table thead{
+    background: rgba(198, 0, 0, 0.85);
+    color: ghostwhite;
+    font-weight: bold;
+}
+.data_table tbody tr:hover {background-color: #f7f7f7;}
+.data_table tbody td:hover {background-color: #ffeaea;}
+
+canvas[id="myChart"]{
+    margin: 50px 50px 0 200px;
+}
+
+button[id="hideButton"]{
+    border: 2px solid black;
+    margin: 0;
+    background: rgba(198, 0, 0, 0.85);
+    font-size: 10px;
+}
+button[id="hideButton"]:hover{
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+
+form input[id="rafraichir"]{
+    background: #820101;
+    color: white;
+    position: absolute;
+    transform: translate(200px,-50px);
+    border-radius: 10px;
+    font-size: 25px;
+}
+form input[id="rafraichir"]:hover{
+    background: white;
+    color: #c40000;
+    border: 1px solid #c40000;
+}
+
+.mode{
+    background: rgb(6, 0, 48);
+    width: 300px;
+}
+.mode:hover{
+    background: rgba(172, 160, 255, 0.65);
+    color: black;
+    font-weight: bold;
+    border-color: rgb(6, 0, 48);
+}
+
+button[id='confirmer']{
+    background: #00074d;
+}
+button[id='confirmer']:hover{
+    background: #c2c7ff;
+    border: 2px solid #00074d ;
+}

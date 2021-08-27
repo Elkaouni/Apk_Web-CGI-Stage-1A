@@ -1,0 +1,118 @@
+-- auto-generated definition
+create table EXTRACT_TOTAL_TMA
+(
+    PERIOD_START        CHAR(11)             not null,
+    YEAR                NUMBER(10)           not null,
+    MONTH               NUMBER(10)           not null,
+    WORK_LOGGED_BY      VARCHAR2(100)        not null,
+    ISSUE               VARCHAR2(100)        not null,
+    ISSUE_TYPE          VARCHAR2(100)        not null,
+    EXTERNAL_TICKET_ID  VARCHAR2(100),
+    SELECT_LIST_1       VARCHAR2(100),
+    SELECT_LIST_3       VARCHAR2(100),
+    APPLICATION_NAME    VARCHAR2(100),
+    PARENT_KEY          VARCHAR2(100),
+    EFFORT              FLOAT,
+    ESTIMATED_EFFORT    FLOAT,
+    HOURS               FLOAT,
+    NB_OF_ISSUES        NUMBER(10),
+    DAY                 NUMBER(10) default 1 not null,
+    RESOLUTION_PROGRESS VARCHAR2(100)
+)
+/
+
+-- auto-generated definition
+create table EXTRACT_TOTAL_HORSPROD
+(
+    PERIOD_START        CHAR(11)             not null,
+    YEAR                NUMBER(10)           not null,
+    MONTH               NUMBER(10)           not null,
+    WORK_LOGGED_BY      VARCHAR2(100)        not null,
+    ISSUE               VARCHAR2(100),
+    ISSUE_TYPE          VARCHAR2(100),
+    EXTERNAL_TICKET_ID  VARCHAR2(100),
+    SELECT_LIST_1       VARCHAR2(100),
+    SELECT_LIST_3       VARCHAR2(100),
+    APPLICATION_NAME    VARCHAR2(100),
+    PARENT_KEY          VARCHAR2(100),
+    EFFORT              FLOAT,
+    ESTIMATED_EFFORT    FLOAT,
+    HOURS               FLOAT,
+    NB_OF_ISSUES        NUMBER(10),
+    DAY                 NUMBER(10) default 1 not null,
+    RESOLUTION_PROGRESS VARCHAR2(100)
+)
+/
+
+-- auto-generated definition
+create table EXTRACT_TOTAL_129
+(
+    PERIOD_START        CHAR(11)      not null,
+    YEAR                NUMBER(10)    not null,
+    MONTH               NUMBER(10)    not null,
+    WORK_LOGGED_BY      VARCHAR2(100) not null,
+    ISSUE               VARCHAR2(100) not null,
+    ISSUE_TYPE          VARCHAR2(100) not null,
+    EXTERNAL_TICKET_ID  VARCHAR2(100),
+    SELECT_LIST_1       VARCHAR2(100) not null,
+    SELECT_LIST_3       VARCHAR2(100) not null,
+    APPLICATION_NAME    VARCHAR2(100),
+    PARENT_KEY          VARCHAR2(100),
+    EFFORT              FLOAT,
+    ESTIMATED_EFFORT    FLOAT,
+    HOURS               FLOAT,
+    NB_OF_ISSUES        NUMBER(10),
+    DAY                 NUMBER default 1,
+    RESOLUTION_PROGRESS VARCHAR2(100)
+)
+/
+
+-- auto-generated definition
+create table CONFIG
+(
+    APPLICATIONS CHAR(50),
+    M1           FLOAT default 0,
+    M2           FLOAT default 0,
+    M3           FLOAT default 0,
+    M4           FLOAT default 0,
+    M5           FLOAT default 0,
+    M6           FLOAT default 0,
+    M7           FLOAT default 0,
+    M8           FLOAT default 0,
+    M9           FLOAT default 0,
+    M10          FLOAT default 0,
+    M11          FLOAT default 0,
+    M12          FLOAT default 0
+)
+/
+
+-- auto-generated definition
+create table COMMANDE_VENDU
+(
+    APPLICATIONS CHAR(50),
+    M1           FLOAT default 0,
+    M2           FLOAT default 0,
+    M3           FLOAT default 0,
+    M4           FLOAT default 0,
+    M5           FLOAT default 0,
+    M6           FLOAT default 0,
+    M7           FLOAT default 0,
+    M8           FLOAT default 0,
+    M9           FLOAT default 0,
+    M10          FLOAT default 0,
+    M11          FLOAT default 0,
+    M12          FLOAT default 0
+)
+/
+
+create table CONFIG_AVENANTS
+(
+	APPLICATIONS VARCHAR(100) not null,
+	DEBUT int not null,
+	FIN int not null,
+	M1 FLOAT default 0,
+	M2 FLOAT default 0,
+	M9 FLOAT default 0
+)
+/
+
