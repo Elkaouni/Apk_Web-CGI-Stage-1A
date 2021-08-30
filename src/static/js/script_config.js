@@ -8,10 +8,6 @@ var commande_brut_m1 = JSON.parse(obj1);
 var commande_brut_m2 = JSON.parse(obj2);
 var commande_brut_m9 = JSON.parse(obj9);
 
-console.log("I'm in the script: ");
-console.log(commande_brut_m1);
-console.log(commande_brut_m2);
-console.log(commande_brut_m9);
 
 let table= document.getElementById("config_table");
 table.innerHTML = "";
